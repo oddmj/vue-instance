@@ -25,6 +25,10 @@ function vueInstancePlugin(Vue) {
     destroyed: function() {
       const vueInstanceName = this.$options.vueInstanceName;
 
+      if (!vueInstanceName) {
+        return;
+      }
+
       delete Vue.$_instanceMap[vueInstanceName];
     }
   });
