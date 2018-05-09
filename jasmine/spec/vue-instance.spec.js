@@ -1,11 +1,5 @@
 describe("vue-instance", function() {
-  it("must be a function", function() {
-    expect(typeof vueInstancePlugin).toBe("function");
-  });
-
   describe("Vue instance", function() {
-    Vue.use(vueInstancePlugin);
-
     const instanceName = "myApp";
 
     beforeEach(function() {
